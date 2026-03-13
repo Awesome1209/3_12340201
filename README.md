@@ -1,48 +1,77 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Desktop (JVM).
+# Tugas Praktikum Minggu 3 — My Profile App (Compose Multiplatform)
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+## Deskripsi Singkat
+Proyek ini adalah aplikasi **My Profile App** menggunakan **Compose Multiplatform**. Aplikasi menampilkan halaman profil yang berisi **foto/ avatar profil berbentuk lingkaran**, **nama**, **bio/deskripsi singkat**, dan **informasi kontak** (Email, Phone, Location). Selain itu, terdapat tombol aksi dan fitur **AnimatedVisibility** untuk menampilkan/menyembunyikan detail.
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+---
+## Screenshot Hasil
 
-### Build and Run Android Application
+<img width="2048" height="1084" alt="Tugas3" src="https://github.com/user-attachments/assets/51053983-9b23-477a-9b99-c08fd3ccc94f" />
 
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
+<img width="2048" height="1084" alt="Tugas3" src="https://github.com/user-attachments/assets/8ac8b65c-1941-4a5f-91e7-2f721252c1ee" />
 
-### Build and Run Desktop (JVM) Application
-
-To build and run the development version of the desktop app, use the run configuration from the run widget
-in your IDE’s toolbar or run it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:run
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:run
-  ```
-
-### Build and Run iOS Application
-
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+---
+## Tujuan Praktikum
+- Memahami konsep dasar **Composable** pada Compose Multiplatform.
+- Menggunakan layout dasar (**Column, Row, Box**) untuk menyusun UI.
+- Menerapkan komponen UI Material (**Card, Text, Button, Image/Icon**).
+- Menggunakan **Modifier** untuk mengatur ukuran, padding, alignment, bentuk (shape), dan styling.
+- Membuat komponen UI yang **reusable** (minimal 3 composable function).
 
 ---
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+## Pemenuhan Kriteria Penugasan (Checklist)
+Berikut pemetaan kriteria tugas dengan implementasi pada project ini:
+
+### 1) Halaman Profile
+- ✅ **Header**: foto/ avatar profil **circular** + **nama**
+- ✅ **Bio / deskripsi singkat**
+- ✅ **List informasi**: Email, Phone, Location
+
+### 2) Minimal 3 Composable Function Reusable
+- ✅ `MyProfileScreen()` — composable utama halaman
+- ✅ `ProfileHeader()` — header profil (avatar + nama)
+- ✅ `ProfileCard()` — card bio + tombol + detail
+- ✅ `InfoItem()` — item informasi (Email/Phone/Location)
+
+### 3) Penggunaan Komponen & Layout (Minimal)
+- ✅ `Column`
+- ✅ `Row`
+- ✅ `Box`
+- ✅ `Card`
+- ✅ `Text`
+- ✅ `Button`
+- ✅ `Image` *(atau avatar alternatif)*
+- ✅ `Icon/Indicator` *(menggunakan emoji sebagai indikator visual jika Icons bermasalah)*
+
+### 4) Bonus (Modifikasi/Variasi)
+- ✅ **AnimatedVisibility** untuk menampilkan/menyembunyikan detail (bio lengkap & daftar info)
+
+---
+
+## Struktur Fitur Aplikasi
+1. **ProfileHeader**
+   - Menampilkan avatar/foto berbentuk lingkaran dan nama pengguna.
+2. **ProfileCard**
+   - Menampilkan ringkasan bio, tombol toggle detail, detail info, dan tombol Contact.
+3. **InfoItem**
+   - Menampilkan label dan value untuk Email/Phone/Location.
+
+---
+
+## Cara Menjalankan Project
+
+### Android
+1. Buka project di **Android Studio**
+2. Pilih device/emulator
+3. Klik tombol **Run (▶)**
+
+### Desktop (Jika tersedia pada template project)
+1. Pilih konfigurasi run **Desktop**
+2. Klik tombol **Run (▶)**
+
+---
+
+## Identitas
+- **Nama**: Awi Septian Prasetyo  
+- **NIM**: 123140201  
