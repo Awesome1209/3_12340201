@@ -8,7 +8,7 @@ Proyek ini adalah aplikasi **My Profile App** menggunakan **Compose Multiplatfor
 
 <img width="2048" height="1084" alt="Tugas3" src="https://github.com/user-attachments/assets/51053983-9b23-477a-9b99-c08fd3ccc94f" />
 
-<img width="2048" height="1084" alt="Tugas3" src="https://github.com/user-attachments/assets/8ac8b65c-1941-4a5f-91e7-2f721252c1ee" />
+<img width="2048" height="1084" alt="Tugas3 (1)" src="https://github.com/user-attachments/assets/91aac2b5-f0c7-4df4-9d8c-f43f087b71cb" />
 
 ---
 ## Tujuan Praktikum
